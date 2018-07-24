@@ -1,4 +1,4 @@
-import java.util.Scanner;
+﻿import java.util.Scanner;
 public class BankAppl {
 	public static void main(String[] args, Bank bank) {
 		Bank bank = new Bank();
@@ -15,8 +15,8 @@ class Bank {
 		scr = new Screen();
 		kbd = new Keyboard();
 
-		acc1 = new Account("ȫ�浿", 10000);
-		acc2 = new Account("ȫ�Ǽ�", 50000);
+		acc1 = new Account("HGD", 10000);
+		acc2 = new Account("HPS", 50000);
 	}
 	// main control
 	public void run() { 
@@ -48,7 +48,7 @@ private char getCommand() { // helper method
 		System.out.println("\t\t\t (6) Terminate");
 
 		// get user selection
-		scr.displayPrompt("\n\t\t��ȣ�� �Է��Ͻÿ�: ");
+		scr.displayPrompt("\n\t\t: ");
 		return kbd.getSelection();
 	}
 } // end of class Bank
@@ -107,24 +107,24 @@ class Account {
 class WithdrawControl {
 	public void execute(Account acc, Screen scr, Keyboard kbd) {
 
-		scr.displayPrompt("����� �ݾ��� �Է��Ͻÿ�: ");
+		scr.displayPrompt("출금할 금액을 입력하시오: ");
 		int amount = kbd.getAmount();
 
 		if (acc.withdraw(amount))
-			scr.displayMessage("�ܰ� " + acc.getBalance() + " �Դϴ�.");
+			scr.displayMessage("balance " + acc.getBalance());
 		else
-			scr.displayMessage("�ܰ� �����մϴ�.");
+			scr.displayMessage("balance is shortage");
 	}
 }
 
 class DepositControl {
 	public void execute(Account acc, Screen scr, Keyboard kbd) {
 
-		scr.displayPrompt("�Ա��� �ݾ��� �Է��Ͻÿ�: ");
+		scr.displayPrompt("입금할 금액을 입력하시오: ");
 		int amount = kbd.getAmount();
 
 		acc.deposit(amount);
-		scr.displayMessage("�ܰ� " + acc.getBalance() + " �Դϴ�.");
+		scr.displayMessage("balance " + acc.getBalance());
 	}
 }
 
@@ -132,6 +132,6 @@ class DepositControl {
 
 class InquiryControl {
 	public void execute(Account acc, Screen scr) {
-		scr.displayMessage("�ܰ� " + acc.getBalance() + " �Դϴ�.");
+		scr.displayMessage("balance " + acc.getBalance());
 	}
 }
