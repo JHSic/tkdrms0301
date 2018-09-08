@@ -19,7 +19,7 @@ public class Average
 		System.out.print(average);
 		}
 		else{
-		System.out.println("잘못입력함");
+		System.out.println("Enter Number");
 		}
 	}
 }
