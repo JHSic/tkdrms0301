@@ -1,0 +1,79 @@
+style{
+    box-sizing: border-box
+}
+header{
+    border-bottom: 1px solid black;
+    font-size: 40px;
+    background-color: rgb(0, 80, 155);
+    padding: 40px;
+    text-align: center;
+    margin: 0px 0px;
+}
+nav{
+    border-right: 0px;
+    width: 20%;
+    height: 800px;
+    float: left;
+    background-color: rgb(0, 20, 90);
+    margin-right: 20px;
+}
+nav li{
+    list-style: none;
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+}
+
+body{
+    background-image: url("backgroundimage.jpg");
+    margin: 0px;
+}
+
+article{
+    color: white;
+    width: 500px;
+    padding: 20px;
+    font-family: verdana;
+    float: left;
+}
+
+#SubmitBody{
+    width: 60%;
+    border-radius: 5px;
+    background-color: rgb(65, 0, 245);
+    padding: 20px 15px;
+    margin: 25px 10px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 5px;
+    margin: 2px;
+    border: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+#write{
+    margin: 5px;
+    border-radius: 3px solid;
+    padding: 5px;
+    align-content: center;
+    float: right;
+}
