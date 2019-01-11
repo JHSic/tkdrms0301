@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf8" />
+<title>[##_page_title_##]</title>
+<link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+<body>
+
+<s_t3>
+<div id="container">
+  <div id="header">
+    <h1><a href="[##_blog_link_##]">[##_title_##]</a></h1>
+    <div class="menu">
+      <ul>
+        <li class="menu_main"><a href="[##_blog_link_##]">메인</a></li>
+        <li class="menu_notice"><a href="[##_blog_link_##]notice"></a>공지사항</a></li>
+        <li class="menu_geustbook"><a href="[##_owner_url_##]">관리자</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- header close -->
+
+    <div id="body">
+      <div id="content">
+        <div class="pageError">
+              <s_page_error>
+              <div class="pageError">
+                존재하지 않는 페이지입니다.
+              </div>
+              </s_page_error>
+        </div>
+
+        <div class="entryNotice">
+          <s_notice_rep>
+            <div class="titleWrap">
+              <h2><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h2>
+                <span class="category"><a href="[##_blog_link_##]notice">공지사항</a></span>
+                <span class="date">[##_notice_rep_date_##]</span>
+            </div>
+            <div class="article">
+              [##_notice_rep_desc_##]
+            </div>
+          </s_notice_rep>
+        </div>
+
+        <div class="entryProtected">
+          <s_article_protected>
+            <h2><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
+            <span class="category">보호글</span>
+            <span class="date">[##_article_rep_date_##]</span>
+            <div class="article">
+              <p> 보호되어 있는 글입니다. 내용을 보시려면 비밀번호를 입력하세요. </p>
+            </div>
+            <dl>
+              <dt><label for="[##_article_password_##]">비밀번호 </label></dt>
+              <dd><input id="[##_article_password_##]" class="textField" name="[##_article_password_##]" type="password" maxlength="16" onkeydown="if (event.keyCode == 13) [##_article_dissolve_##]" />
+              <button type="button" class="btnSubmit" onclick="[##_article_dissolve_##]"><span>Submit</span></button> </dd>
+            </dl>
+          </s_article_protected>
+        </div>
+
+        <div class="entryPost">
+          <s_article_rep>
+            <div class="entry"> 글
+              <div class="titleWrap">
+                <h2><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
+                <span class="category"> <a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></span>
+                <span class="date">[##_article_rep_date_##] </span>
+                <span class="name">[##_article_rep_author_##]</span>
+                  <s_ad_div>
+                    <div class="admin">
+                      <a href="[##_s_ad_m_link_##]">수정</a> :
+                      <a href="#" onclick="[##_s_ad_m_onclick_##]">수정</a>
+                      <a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a>
+                      <a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a>
+                    </div>
+                  </s_ad_div>
+                </div>
+                <div class="article">
+                  [##_article_rep_desc_##]
+                  <div class="author">
+                    <span class="text">Posted by </span>[##_article_rep_author_##]
+                  </div>
+                </div>
+              </div>
+            </s_article_rep>
+          </div> <!-- entryPost close -->
+
+          <s_paging>
+            <div class="paging">
+              <a [##_prev_page_##] class="[##_no_more_prev_##]"><span>◀ Prev</span></a>
+              <span class="numbox">
+                <s_paging_rep>
+                  <a [##_paging_rep_link_##] class="num"> [##_paging_rep_link_num_##]</a>
+                </s_paging_rep>
+              </span>
+              <a [##_next_page_##] class="[##_no_more_next_##]"><span> Next ▶</span></a>
+            </div>
+          </s_paging>
+        </div><!-- content close -->
+
+        <div id="sidebar">
+          <s_sidebar_element>
+              <div class="blogImage"><img src="[##_image_##]" alt="블로그 이미지" /></div>
+          </s_sidebar_element><!-- 블로그 이미지 모듈 -->
+
+          <s_sidebar_element>
+            <div class="blogDescription">
+              <p class="box">[##_desc_##]<span class="blogger">[##_blogger_##]</span></p>
+            </div>
+          </s_sidebar_element><!-- 블로그 설명 모듈 -->
+
+          <s_sidebar_element>
+            <s_rct_notice>
+            <div class="notice">
+              <h3>Notice</h3>
+                <ul class="box">
+                  <s_rct_notice_rep>
+                    <li><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a> </li>
+                  </s_rct_notice_rep>
+                </ul>
+            </div>
+            </s_rct_notice>
+          </s_sidebar_element><!-- 공지사항 모듈-->
+
+          <s_sidebar_element>
+            <div class="category">
+              <h3>Category</h3>
+              [##_category_list_##]
+            </div>
+          </s_sidebar_element><!-- 카테고리 모듈-->
+
+          <s_sidebar_element>
+  					<div id="archive">
+  						<h3>article box</h3>
+  						<ul>
+  							<s_archive_rep>
+  								<li>
+  									<a href="[##_archive_rep_link_##]">[##_archive_rep_date_##] </a>
+  									<span class="cnt">([##_archive_rep_count_##])</span>
+  								</li>
+  							</s_archive_rep>
+  						</ul>
+  					</div>
+  				</s_sidebar_element><!-- 최근 보관함 모듈 -->
+
+          <s_sidebar_element>
+            <div class="calendar">
+              <div class="calender">
+                <h3>Calendar</h3>
+                <div class="box">[##_calendar_##]</div>
+              </div>
+            </div>
+          </s_sidebar_element><!-- 달력 모듈-->
+
+          <s_sidebar_element>
+            <div class="counter">
+              <h3>Counter</h3>
+              <div class="countBox">
+                <dl class="countTotal">
+                  <dt>Total</dt>
+                  <dd>[##_count_total_##] </dd>
+                </dl>
+                <dl class="countToday">
+                  <dt>Today</dt>
+                  <dd>[##_count_today_##]</dd>
+                </dl>
+                <dl class="countYesterday">
+                  <dt>Yesterday</dt>
+                  <dd>[##_count_yesterday_##]</dd>
+                </dl>
+              </div>
+          </s_sidebar_element><!-- 카운터 모듈 -->
+        </div><!-- sidebar close -->
+      </div><!-- content close -->
+    </div><!-- body close -->
+
+    <div id="footer">
+      <div class="footMenu">
+        <a href="[##_blog_link_##]">Home</a> /
+        <a href="[##_owner_url_##]/entry/post">글쓰기</a> /
+        <a href="[##_owner_url_##]">Admin</a> /
+      </div>
+    </div><!-- footer close -->
+  </div>
+</div><!-- container close -->
+</s_t3>
+</body>
+</html>
